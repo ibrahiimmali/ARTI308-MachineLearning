@@ -1,21 +1,22 @@
-#Lab 4: Data Quality Assessment & Preprocessing (Housing Dataset)#
-Dataset Overview
-The Housing.csv dataset contains 545 records with 13 attributes, covering property price, size, and key amenities such as parking, air conditioning, and furnishing status. This structure makes it suitable for predicting house prices and analyzing factors that influence value.
+# Lab 4: Data Quality Assessment & Preprocessing
 
-Preprocessing Summary
-During preprocessing, I addressed three main issues: inconsistent feature scales (e.g., large price values vs. small count variables), the presence of outliers in price and area, and categorical features stored as text that needed numerical encoding. I also checked for missing values and prepared the data for modeling.
+## Dataset Description
+The `Housing.csv` dataset contains **545** rows and **13** features, including price, area, and amenities such as air conditioning, basement, parking, and furnishing status. It is suitable for house price prediction and understanding which property characteristics affect value.
 
-Missing Values
-For simulated missing entries in the area column, I used median imputation. The median was selected because it is less sensitive to extreme property sizes and keeps the central tendency of the feature stable.
+## Preprocessing Findings
+I observed scale differences between features (price vs. count variables), outliers in key numeric columns, and categorical attributes stored as text that required numerical encoding. I also checked for missing values and prepared the data for later modeling steps.
 
-Outlier Handling
-To reduce the impact of extreme prices, I applied the IQR method on the price column. After removing 15 outlier records, the dataset size decreased from 545 to 530 rows, resulting in a more reliable distribution for downstream models.
+## Missing Values
+For simulated missing values in the `area` column, I used **median imputation**. The median is more robust than the mean in this dataset because some houses have extremely large areas that would skew the average.
 
-Feature Scaling
-I applied Min–Max Scaling (0–1 range) and Z‑Score Normalization (mean 0, standard deviation 1) to the price and area features. This scaling step ensures that models which rely on distance or gradient-based optimization treat these features fairly.
+## Outlier Management
+I applied the **Interquartile Range (IQR)** method to the `price` column to detect and remove extreme outliers. After dropping **15** outlier records, the dataset size went from **545** to **530** rows, giving a more stable price distribution.
 
-Dimensionality Reduction (PCA)
-Using PCA on six numerical features, I reduced the feature space while preserving most of the information. The first two principal components captured about 62.9% of the total variance, simplifying the data without losing its main patterns.
+## Normalization
+To put features on a comparable scale, I applied **Min–Max Scaling** (range 0–1) and **Z‑Score Normalization** (mean 0, standard deviation 1) to the `price` and `area` columns. This helps distance‑based and gradient‑based models train more effectively.
 
-Objective
-The goal of this lab was to clean, transform, and simplify the housing dataset so it is ready for machine learning tasks like regression or clustering. After preprocessing, the data is more consistent, less noisy, and better suited for building accurate and stable models.
+## Dimensionality Reduction (PCA)
+I ran **Principal Component Analysis (PCA)** on six numerical features. The first two principal components captured about **62.9%** of the total variance, reducing dimensionality while preserving most of the important information.
+
+## Goal
+The goal of this lab was to clean, scale, and simplify the housing data to make it ready for machine learning tasks like regression or clustering. After preprocessing, the dataset is more consistent, less noisy, and better suited for building accurate models.
