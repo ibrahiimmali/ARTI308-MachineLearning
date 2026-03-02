@@ -1,8 +1,17 @@
-# ARTI 308 - Machine Learning
+Lab 4: Data Quality Assessment & Preprocessing
+Dataset Description
+I am using the Housing.csv Dataset, which contains 545 entries and 13 features. It includes property details such as price, area, and various amenities like air conditioning and furnishing status.
 
-### **Name:** Ibrahim Mohamed Ali
-### **Student ID:** 2240009094
-### **Section:** 6MY01
+Preprocessing Findings
+Data Quality: Identified scale inconsistencies (millions vs. units), extreme outliers in price, and categorical text features requiring encoding.
 
-## Course Overview
-This repository contains my laboratory work and assignments for the ARTI 308 Machine Learning course (Academic Year 2025/2026).
+Missing Values: Handled artificial missing data in the area column using Median Imputation to ensure a robust center point unaffected by outliers.
+
+Outlier Management: Used the Interquartile Range (IQR) method to remove 15 extreme price points, stabilizing the dataset from 545 to 530 rows.
+
+Normalization: Applied Min-Max and Z-score scaling to price and area to bring features into a comparable range for modeling.
+
+PCA: Reduced six numerical features into two principal components, capturing 62.9% of the total variance.
+
+Goal
+These steps clean and standardize the data, making it ready for high-performance regression or clustering models.
