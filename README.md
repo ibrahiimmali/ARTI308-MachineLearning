@@ -1,25 +1,25 @@
-# Lab 6: Linear Regression Analysis - Ecommerce Customers
+# Logistic Regression Project - Advertising Dataset
 
 ## Objective
-This lab applies Linear Regression to an ecommerce dataset to study customer spending behavior. The main goal is to determine whether the Mobile App or the Website has a greater impact on Yearly Amount Spent.
+This lab uses a logistic regression model to predict whether a user will click on an advertisement based on their browsing behavior and demographic information. The main goal is to understand which features are most related to ad clicks.
 
 ## Dataset Overview
-The dataset includes five main variables: Avg. Session Length, Time on App, Time on Website, Length of Membership, and Yearly Amount Spent. The first four are input features, while Yearly Amount Spent is the target variable.
+The dataset includes user behavior and profile features such as daily time spent on site, age, area income, daily internet usage, and click outcome. The target variable is **Clicked on Ad**, which is either 0 or 1.
 
 ## Tools Used
 - Pandas and NumPy for data handling.
-- Matplotlib and Seaborn for visualization.
-- Scikit-Learn for model training and evaluation.
+- Matplotlib and Seaborn for visual analysis.
+- Scikit-Learn for logistic regression, train-test splitting, and model evaluation.
 
 ## Main Steps
-- Performed exploratory data analysis using jointplots and pairplots.
+- Explored the dataset with histograms, pairplots, and correlation checks.
+- Prepared the data for modeling.
 - Split the data into training and testing sets.
-- Trained a Linear Regression model.
-- Evaluated the model using MAE, MSE, and RMSE.
-- Plotted residuals to check model fit.
+- Trained a logistic regression model.
+- Evaluated the model using classification results and predictions.
 
 ## Findings
-The model showed that **Time on App** has a stronger effect on spending than **Time on Website**. The most important factor was **Length of Membership**, which had the highest positive relationship with Yearly Amount Spent.
+The analysis showed that features like **Daily Time Spent on Site** and **Daily Internet Usage** are strongly related to whether a user clicks on an ad. The model helps identify which users are more likely to respond to advertisements.
 
 ## Conclusion
-The results suggest that the company should focus more on improving the Mobile App and encouraging customer loyalty through longer membership.
+This lab demonstrates how logistic regression can be used to classify user behavior and support advertising decisions.
