@@ -1,22 +1,22 @@
-# K Nearest Neighbors Project
+# Loan Data Classification Project
 
 ## Objective
-This project uses the K-Nearest Neighbors (KNN) algorithm to classify whether a customer belongs to the target class based on several numerical features. The goal is to build a model that can predict the class using distance-based pattern recognition.
+This lab uses a classification model to analyze loan applicants and predict whether a loan will be fully paid or not. The goal is to identify the main factors that influence loan risk.
 
 ## Dataset Overview
-The dataset contains 10 feature columns and one target column, `TARGET CLASS`. The features include variables such as XVPM, GWYH, TRAT, and others, which represent numerical customer data used for classification.
+The dataset includes borrower information such as interest rate, installment, annual income, debt-to-income ratio, FICO score, revolving balance, and credit history. The target variable is **not.fully.paid**.
 
 ## Tools Used
 - Pandas and NumPy for data handling.
 - Matplotlib and Seaborn for visualization.
-- Scikit-Learn for scaling, train-test splitting, and KNN classification.
+- Scikit-Learn for model building and evaluation.
 
 ## Main Steps
-- Loaded and explored the dataset.
-- Standardized the feature values.
-- Split the data into training and testing sets.
-- Trained a KNN model.
-- Evaluated model performance using predictions and error checks.
+- Loaded and explored the loan dataset.
+- Checked the data structure and summary statistics.
+- Prepared the features and target variable.
+- Trained a classification model.
+- Evaluated the model using predictions and performance metrics.
 
 ## Conclusion
-This lab shows how KNN can be used to classify data based on similarity between observations. Feature scaling is important because KNN depends on distance calculations.
+This lab demonstrates how loan data can be used to predict credit risk and support lending decisions.
