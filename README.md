@@ -1,23 +1,23 @@
-# Support Vector Machines Assignment - Lab10
+# Credit Card Customer Segmentation Project - Lab11
 
 ## Objective
-This assignment applies Support Vector Machines (SVM) to the Iris dataset to classify flower species based on sepal and petal measurements. The goal is to build a model that can accurately separate the three Iris classes.
+This project uses K-Means clustering to segment credit card customers based on their spending and usage behavior. Since there is no target label, the goal is to discover natural customer groups in the data.
 
 ## Dataset Overview
-The Iris dataset contains 150 samples from three species: Setosa, Versicolor, and Virginica. Each sample includes four numerical features: sepal length, sepal width, petal length, and petal width.
+The dataset contains customer-level credit card activity features such as balance, purchases, cash advance, credit limit, payments, and tenure. Each row represents one customer, and the data is used for unsupervised learning.
 
 ## Tools Used
-- Pandas and Seaborn for data handling and visualization.
-- Matplotlib for plotting.
-- Scikit-Learn for SVM model training, prediction, and evaluation.
+- Pandas and NumPy for data handling.
+- Matplotlib and Seaborn for visualization.
+- Scikit-Learn for scaling, clustering, PCA, and evaluation.
 
 ## Main Steps
-- Loaded and explored the Iris dataset.
-- Visualized the data using pairplots and scatter plots.
-- Split the data into training and testing sets.
-- Trained an SVM model.
-- Tuned the model using grid search.
-- Evaluated performance using confusion matrix and classification report.
+- Loaded and inspected the dataset.
+- Checked missing values and summary statistics.
+- Scaled the features using StandardScaler.
+- Applied K-Means clustering.
+- Used PCA to visualize the clusters.
+- Reviewed cluster counts and cluster characteristics.
 
 ## Conclusion
-This assignment shows how SVM can be used for multi-class classification and how parameter tuning can improve model performance.
+This lab shows how clustering can be used to group similar customers and support better business decisions, such as targeted marketing and customer segmentation.
